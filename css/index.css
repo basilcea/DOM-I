@@ -163,7 +163,10 @@ header .logo {
 .green{
     color:green;
 }
-
+.styledH1:hover{
+ font-size: 80px;
+ color:green;
+}
 /* Contact Styles */
 
 .contact p {

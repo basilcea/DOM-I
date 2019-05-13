@@ -71,7 +71,7 @@ h1.appendChild(br)
 h1.appendChild(document.createTextNode(array[1]))
 h1.appendChild(abr)
 h1.appendChild(document.createTextNode(array[2]))
-console.log(h1)
+h1.className ='styledH1'
 
 let headerButton = headingDiv.querySelector('button')
 headerButton.innerText= siteContent.cta["button"]
@@ -101,7 +101,10 @@ const contact = document.getElementsByClassName('contact')[0]
 contact.querySelector('h4').textContent = siteContent["contact"]["contact-h4"]
 const p = contact.querySelectorAll('p')
 console.log(p)
-p[0].textContent = siteContent["contact"]['address'];
+p[0].textContent = siteContent["contact"]['address'].substring(0,19);
+p[0].appendChild(document.createElement('br'))
+p[0].appendChild(document.createTextNode(siteContent["contact"]['address'].substring(19)))
+
 p[1].textContent = siteContent["contact"]['phone'];
 p[2].textContent = siteContent["contact"]['email'];
 
