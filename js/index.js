@@ -46,17 +46,17 @@ let allLink = navlinks.children;
  [...allLink].forEach((a, index) => {
    return(
      // task 3
-     a.className= 'green',
+     a.style.color= 'green',
      a.innerText= siteContent.nav[`nav-item-${index+1}`])
     }
   )
   //task 3
   navlinks.appendChild(document.createElement('a'))
   allLink[6].innerText='Follow Us';
-  allLink[6].className='green'
+  allLink[6].style.color='green'
   navlinks.prepend(document.createElement('a'));
   allLink[0].innerText ='Welcome';
-  allLink[0].className='green'
+  allLink[0].style.color='green'
 
 
 
