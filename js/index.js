@@ -71,14 +71,12 @@ h1.appendChild(br)
 h1.appendChild(document.createTextNode(array[1]))
 h1.appendChild(abr)
 h1.appendChild(document.createTextNode(array[2]))
-h1.className ='styledH1'
-
+h1.onmouseover =()=>{
+  h1.style.fontSize ='80px'
+  h1.style.color='green'
+}
 let headerButton = headingDiv.querySelector('button')
 headerButton.innerText= siteContent.cta["button"]
-
-
-
-
 
 
 let headerImage = document.getElementById('cta-img')
