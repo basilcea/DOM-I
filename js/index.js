@@ -48,13 +48,11 @@ let eachLink = [...allLink].forEach((a, index) => a.innerText= siteContent.nav[`
 let headingDiv = document.getElementsByClassName('cta-text')[0]
 const h1= headingDiv.querySelector('h1')
 let array = siteContent.cta.h1.split(' ')
-console.log(array)
-const br = document.createElement('br')
 h1.textContent =array[0]
-h1.appendChild(br)
-h1.textContent += ` ${array[1]}`
-h1.appendChild(br)
-h1.textContent +=  `${array[2]}`
+h1.appendChild(document.createElement('br'))
+h1.textContent +=` ${array[1]}`
+h1.appendChild(document.createElement('br'))
+h1.textContent +=` ${array[2]}`
 console.log(h1)
 
 let headerButton = headingDiv.querySelector('button')
@@ -88,3 +86,6 @@ console.log(p)
 p[0].textContent = siteContent["contact"]['address'];
 p[1].textContent = siteContent["contact"]['phone'];
 p[2].textContent = siteContent["contact"]['email'];
+
+const footer =document.querySelector('footer')
+footer.querySelector('p').textContent = siteContent["footer"]["copyright"]
