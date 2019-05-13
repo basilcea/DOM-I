@@ -47,14 +47,38 @@ let eachLink = [...allLink].forEach((a, index) => a.innerText= siteContent.nav[`
 
 let headingDiv = document.getElementsByClassName('cta-text')[0]
 const h1= headingDiv.querySelector('h1')
-h1.textContent = 'DOM'
-let br = document.createElement('br')
-h1.insertAdjacentText('beforeEnd', 'is')
+let array = siteContent.cta.h1.split(' ')
+console.log(array)
+const br = document.createElement('br')
+h1.textContent =array[0]
 h1.appendChild(br)
-h1.insertAdjacentText('beforeEnd'," Awesome")
-console.log(headingDiv)
+h1.textContent += ` ${array[1]}`
+h1.appendChild(br)
+h1.textContent +=  `${array[2]}`
+console.log(h1)
 
 let headerButton = headingDiv.querySelector('button')
 headerButton.innerText= siteContent.cta["button"]
 let headerImage = document.getElementById('cta-img')
 headerImage.src = siteContent.cta["img-src"]
+
+let textDivs = document.querySelectorAll('.text-content')
+let features = textDivs[0];
+let about = textDivs[1];
+let services = textDivs[2];
+let product = textDivs[3];
+let vision = textDivs[4]
+
+document.getElementById('middle-img').src =siteContent['main-content']['middle-img-src'];
+
+const inputValue = (div, text) =>{ 
+  div.querySelector('h4').textContent = siteContent["main-content"][`${text}-h4`]
+  div.querySelector('p').textContent = siteContent["main-content"][`${text}-content`]
+}
+inputValue(features,'features');
+inputValue(about, 'about');
+inputValue(services,'services');
+inputValue(product,'product');
+inputValue(vision,'vision');
+
+const contact = document.getElementsByClassName('contact')[0]
