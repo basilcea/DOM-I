@@ -82,3 +82,9 @@ inputValue(product,'product');
 inputValue(vision,'vision');
 
 const contact = document.getElementsByClassName('contact')[0]
+contact.querySelector('h4').textContent = siteContent["contact"]["contact-h4"]
+const p = contact.querySelectorAll('p')
+console.log(p)
+p[0].textContent = siteContent["contact"]['address'];
+p[1].textContent = siteContent["contact"]['phone'];
+p[2].textContent = siteContent["contact"]['email'];
