@@ -44,3 +44,17 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let navlinks = document.querySelector('nav')
 let allLink = navlinks.children;
 let eachLink = [...allLink].forEach((a, index) => a.innerText= siteContent.nav[`nav-item-${index+1}`])
+
+let headingDiv = document.getElementsByClassName('cta-text')[0]
+const h1= headingDiv.querySelector('h1')
+h1.textContent = 'DOM'
+let br = document.createElement('br')
+h1.insertAdjacentText('beforeEnd', 'is')
+h1.appendChild(br)
+h1.insertAdjacentText('beforeEnd'," Awesome")
+console.log(headingDiv)
+
+let headerButton = headingDiv.querySelector('button')
+headerButton.innerText= siteContent.cta["button"]
+let headerImage = document.getElementById('cta-img')
+headerImage.src = siteContent.cta["img-src"]
