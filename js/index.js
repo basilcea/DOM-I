@@ -45,20 +45,32 @@ let navlinks = document.querySelector('nav')
 let allLink = navlinks.children;
  [...allLink].forEach((a, index) => {
    return(
+     // task 3
      a.className= 'green',
      a.innerText= siteContent.nav[`nav-item-${index+1}`])
     }
   )
-  
+  //task 3
+  navlinks.appendChild(document.createElement('a'))
+  allLink[6].innerText='Follow Us';
+  allLink[6].className='green'
+  navlinks.prepend(document.createElement('a'));
+  allLink[0].innerText ='Welcome';
+  allLink[0].className='green'
+
+
 
 let headingDiv = document.getElementsByClassName('cta-text')[0]
-const h1= headingDiv.querySelector('h1')
+let h1= headingDiv.querySelector('h1')
 let array = siteContent.cta.h1.split(' ')
-h1.textContent =array[0]
-h1.appendChild(document.createElement('br'))
-h1.textContent +=` ${array[1]}`
-h1.appendChild(document.createElement('br'))
-h1.textContent +=` ${array[2]}`
+let br =document.createElement('br')
+let abr =document.createElement('br')
+console.log(array)
+h1.textContent +=array[0]
+h1.appendChild(br)
+h1.appendChild(document.createTextNode(array[1]))
+h1.appendChild(abr)
+h1.appendChild(document.createTextNode(array[2]))
 console.log(h1)
 
 let headerButton = headingDiv.querySelector('button')
