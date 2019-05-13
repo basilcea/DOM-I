@@ -75,8 +75,22 @@ h1.className ='styledH1'
 
 let headerButton = headingDiv.querySelector('button')
 headerButton.innerText= siteContent.cta["button"]
+
+
+
+
+
+
 let headerImage = document.getElementById('cta-img')
 headerImage.src = siteContent.cta["img-src"]
+//stretch 
+
+headerButton.onclick =()=>{
+  h1.textContent='DOM is Starting . . .'
+  headerButton.innerText ='Welcome to DOM'
+  headerImage.style.display='none';
+}
+
 
 let textDivs = document.querySelectorAll('.text-content')
 let features = textDivs[0];
