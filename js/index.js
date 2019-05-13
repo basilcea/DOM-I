@@ -43,7 +43,13 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navlinks = document.querySelector('nav')
 let allLink = navlinks.children;
-let eachLink = [...allLink].forEach((a, index) => a.innerText= siteContent.nav[`nav-item-${index+1}`])
+ [...allLink].forEach((a, index) => {
+   return(
+     a.className= 'green',
+     a.innerText= siteContent.nav[`nav-item-${index+1}`])
+    }
+  )
+  
 
 let headingDiv = document.getElementsByClassName('cta-text')[0]
 const h1= headingDiv.querySelector('h1')
